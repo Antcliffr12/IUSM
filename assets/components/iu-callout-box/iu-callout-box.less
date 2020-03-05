@@ -1,0 +1,131 @@
+.iu-callout-box {
+	position: relative;
+	padding: 30px;
+	h2 {
+		color: @iu-crimson;
+		font-family: BentonSansBold, Arial, Helvetica, sans-serif;
+		font-size: @text-lg;
+		margin-top: 0;
+		margin-bottom: 25px;
+	}
+	//
+	// p {
+	// 	font-size:@text-md !important;
+	// }
+	.body{
+		p{
+		font-size:1.125rem;
+		}
+	}
+
+	&.pull-left {
+		max-width: 360px;
+		margin-right: 40px;
+		margin-bottom: 2rem;
+	}
+
+	&.pull-right {
+		max-width: 360px;
+		margin-left: 40px;
+		margin-bottom: 2rem;
+	}
+
+	&.callout-alert {
+		padding-left: 100px;
+		h2 {
+			font-family: BentonSansRegular, Arial, Helvetica, sans-serif;
+		}
+
+		&::before {
+			content: ' ';
+			position: absolute;
+			left: 30px;
+			top: 30px;
+			background: url('../images/alert.png') no-repeat left top;
+			width: 40px;
+			height: 40px;
+		}
+	}
+
+	&.callout-cta {
+		//font-size: @text-md;
+		line-height: 1.3333;
+		h2 {
+			font-size: @text-xl;
+			font-family: BentonSansRegular, Arial, Helvetica, sans-serif;
+			margin-bottom: 35px;
+		}
+		.button-row { margin-top: 15px; }
+	}
+
+	&.callout-promo {
+		font-size: @text-xl;
+		line-height: 1.3333;
+	}
+
+	.button {
+		&.add-logo{
+			padding: 13px 20px 13px 70px;
+			font-size: 1.625rem;
+			&::after {
+				display: none !important;
+			}
+			&::before {
+				position: absolute;
+				content: '';
+				background: url('../images/iu-logo-small.png') no-repeat left top;
+				width: 32px;
+				height: 40px;
+				left: 20px;
+				top: 9px;
+			}
+		}
+	}
+
+	@media @tablet-and-above {
+		&.indented {
+			margin-left: 25%;
+		}
+
+	}
+
+	@media @tablet-and-below{
+		.body{
+			p{
+			font-size:@text-sm;
+			}
+		}
+	}
+
+	@media @phone {
+		&.pull-left, &.pull-right {
+			float: none !important;
+			margin: 0 -20px 30px -20px !important;
+			width: auto;
+			max-width: none;
+		}
+	}
+
+	.page-layout-two-column & {
+		@media @tablet-and-above {
+			.notched(20px, @white);
+			.clip-path(~"polygon(100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 0)");
+		}
+	}
+
+}
+
+// Adjust placement for floated callouts when next to top-level titles
+.iu-section-block {
+	&.padding-normal > div > .iu-callout-box + .iu-text-block {
+		h1, h2 { &:first-child { margin-top: -80px; } }
+	}
+	&.padding-condensed > div > .iu-callout-box + .iu-text-block {
+		h1, h2 { &:first-child { margin-top: -40px; } }
+	}
+	@media @phone {
+		.iu-callout-box + .iu-text-block {
+			h1, h2 { &:first-child { margin-top: 0 !important; } }
+		}
+	}
+}

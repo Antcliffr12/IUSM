@@ -1,0 +1,82 @@
+
+
+.error404 {
+
+    .item {
+      position:relative;
+      max-height: 960px;
+      img {
+        width: 100%;
+      }
+    }
+
+    .overlay-box {
+      padding: 40px;
+      color: @white;
+      font-size: @text-lg;
+      line-height: 1.5;
+      h1,h2 {
+        font-size: @text-xxl;
+        position: relative;
+      }
+      .button {
+        color: @white;
+        border-color: @white;
+        background-color: transparent;
+        &:hover {
+          background-color: @button-default-background;
+        }
+        &::after { border-left-color: @white; }
+      }
+      p{
+        position: relative;
+      }
+    }
+
+    @media @tablet-and-above {
+      .overlay-box {
+        position: absolute;
+        bottom: 100px;
+        left: 20px;
+        right: 20px;
+        margin: auto;
+        max-width: 1160px;
+        width: 100%;
+        width: ~"calc(100% - 40px)";
+        overflow:hidden;
+        &::before{
+          content:'';
+          background:url(../images/notch-dark.svg) right bottom no-repeat;
+          width:2000px;
+          height:2000px;
+          bottom:-25px;
+          right:-25px;
+          overflow:hidden;
+          position:absolute;
+        }
+      }
+    }
+
+    @media @tablet {
+      .overlay-box {
+        padding: 30px;
+      }
+    }
+
+    @media @phone {
+      .overlay-box {
+        position: relative;
+        background: @iu-black;
+        padding: 20px;
+        h2{
+          font-size:1.25rem;
+          margin-bottom:10px;
+        }
+        p{
+          margin:12px 0;
+          font-size:@text-xs;
+        }
+      }
+
+    }
+}

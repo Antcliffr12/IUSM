@@ -1,0 +1,138 @@
+#campuses {
+
+	font-size: @text-md;
+	line-height: 1.55;
+
+	h1{
+		font-size: @text-md * 2;
+		margin-bottom: 30px;
+	}
+
+	.campus-links {
+		position: relative;
+		margin-top: 0;
+		.list-wrapper {
+			margin-top: 40px;
+		}
+		ul {
+			display: block;
+			float: left;
+			padding: 0 0 0 20px;
+			margin: 0;
+			width: 50%;
+			&:first-child {
+				padding: 0 20px 0 0;
+			}
+			li {
+				display: block;
+				list-style-type: none;
+				margin: 0;
+				border-bottom: 1px solid #ccc;
+				&:first-child {
+					border-top: 1px solid #ccc;
+				}
+			}
+		}
+		a {
+			color: @iu-midnight;
+			display: block;
+			font-size: @text-md;
+			padding: 8px 0;
+			text-decoration: none !important;
+		}
+	}
+
+	.campus-map {
+		text-align: center;
+		.map-container {
+			display: inline-block;
+			position: relative;
+
+		}
+		img {
+			display: block;
+			margin: 0;
+		}
+		[data-campus] {
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			display: block;
+			background: @white;
+			&.active { background: @iu-crimson; }
+		}
+		[data-campus="Bloomington"] { top: 233px; left: 101px; }
+		[data-campus="Evansville"] { top: 333px; left: 27px; }
+		[data-campus="Fort Wayne"] { top: 57px; left: 198px; }
+		[data-campus="Northwest – Gary"] { top: 15px; left: 48px; }
+		[data-campus="Indianapolis"] { top: 172px; left: 129px; }
+		[data-campus="Muncie"] { top: 139px; left: 186px; }
+		[data-campus="South Bend"] { top: 7px; left: 119px; }
+		[data-campus="Terre Haute"] { top: 203px; left: 44px; }
+		[data-campus="West Lafayette"] { top: 116px; left: 72px; }
+	}
+
+	.campus-detail {
+		h2 {
+			font-family: BentonSansBold, Arial, Helvetica, sans-serif;
+			font-size: @text-md;
+			margin-bottom: 35px;
+		}
+		ul {
+			margin: 30px 0 0 0;
+			padding: 0;
+		}
+
+		li {
+			list-style-type: none;
+			margin: 5px 0 0 0;
+			padding: 0 0 0 20px;
+			position: relative;
+			&:first-child {
+				margin-top: 0;
+			}
+			&::before {
+				content: ' ';
+				position: absolute;
+				left: 0;
+				top: 8px;
+				width: 10px;
+				height: 10px;
+				background: url('../images/icon-bullet-arrow-black.png') no-repeat left top;
+			}
+		}
+		[data-campus] { display: none; }
+		[data-campus].active { display: block; }
+	}
+
+	@media @desktop {
+		.campus-links a {
+			&:hover, &.active {
+				background: @iu-midnight;
+				color: @white;
+				padding: 8px 10px;
+			}
+		}
+	}
+
+	@media @tablet-and-below {
+		h1{
+			font-size:1.75rem;
+			margin-bottom:16px;
+		}
+		.campus-map, .campus-detail { display: none; }
+	}
+
+	@media @phone{
+		h1{
+			margin-bottom:9px;
+			font-size:1.25rem;
+		}
+		.campus-links{
+			a{
+				font-size:@text-xs;
+			}
+		}
+	}
+
+}

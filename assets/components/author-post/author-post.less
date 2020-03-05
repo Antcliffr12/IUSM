@@ -1,0 +1,137 @@
+.author-post{
+  padding:80px 0;
+  .author-id-card{
+    padding:40px;
+    position:relative;
+    .notched();
+    .image{
+      margin-bottom:0;
+    }
+    .content{
+      h1{
+        font-size:30px;
+        margin-bottom:8px;
+      }
+      p{
+        margin:0;
+        font-size:18px;
+        &.title{
+          margin-bottom:26px;
+        }
+      }
+
+      a.full-profile-link{
+        background:@iu-midnight;
+        position:relative;
+        color:@white;
+        text-transform: uppercase;
+        text-align: center;
+        padding:12px 30px 10px 14px;
+        font-size:13px;
+        height:40px;
+        margin-top: 35px;
+        display: inline-block;
+        &:focus,&:hover{
+          text-decoration: none;
+          outline:0;
+          box-shadow: none;
+        }
+        &:after{
+          content:'';
+          position:absolute;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 3px 0 3px 5.2px;
+          border-color: transparent transparent transparent #ffffff;
+          right:16px;
+          top:16px;
+        }
+      }
+
+    }
+  }
+  .author-posts{
+    padding-top:36px;
+    h1{
+      font-size:24px;
+      margin-bottom:19px;
+    }
+    .item{
+      padding-top:17px;
+      padding-bottom:17px;
+      border-bottom:1px solid @iu-cream;
+      &:first-child{
+        border-top:1px solid @iu-cream;
+      }
+      h2{
+        margin-bottom:2px;
+        font-size:24px;
+        a{
+          &:hover,&:focus{
+            text-decoration: none;
+          }
+        }
+      }
+      p{
+        margin:0;
+        font-size:13px;
+        a{
+          &:hover,&:focus{
+            text-decoration:none;
+          }
+        }
+      }
+    }
+
+  }
+
+  .contributed-blogs{
+    margin-bottom:38px;
+    h1{
+      font-size:24px;
+      margin-bottom:19px;
+    }
+    ul{
+      padding:0;
+      margin:0;
+      width:100%;
+      li{
+        list-style-type: none;
+        border-bottom:1px solid @white;
+        &:last-of-type{
+          border-bottom:0;
+        }
+        &.empty{
+          font-size: 24px;
+          padding: 20px;
+          display: block;
+          line-height: 1;
+          background: #EEEDEB;
+          color:@iu-black;
+        }
+        a{
+          font-size:24px;
+          padding:20px;
+          display:block;
+          line-height: 1;
+          background:@iu-cream;
+          &:hover,&:focus{
+            outline:0;
+            box-shadow: none;
+            text-decoration:none;
+          }
+        }
+      }
+    }
+  }
+
+  @media @phone{
+    .author-id-card{
+      .image{
+        margin-bottom:18px;
+      }
+    }
+  }
+
+}

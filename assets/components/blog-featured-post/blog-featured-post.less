@@ -1,0 +1,47 @@
+.blog-featured-post{
+  min-height:80px;
+  &.add-negative-margin{
+    margin-top:-28px;
+  }
+  .plugin-description{
+    font-size:20px;
+    color:@iu-crimson;
+    text-transform: uppercase;
+    font-family: BentonSansBold, Arial, Helvetica, sans-serif;
+  }
+
+  h1{
+    font-size:40px;
+    a{
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+
+  img{
+    height:auto;
+    max-width:100%;
+    @media @tablet-and-below{
+      margin-bottom:15px;
+    }
+  }
+
+  p{
+    margin:0;
+    font-size:18px;
+    &.excerpt{
+      margin-bottom:28px;
+    }
+    &.details{
+      font-size:13px;
+      a.author{
+        color:@iu-midnight;
+        &:hover, &:focus{
+          text-decoration:none;
+        }
+      }
+    }
+  }
+
+}

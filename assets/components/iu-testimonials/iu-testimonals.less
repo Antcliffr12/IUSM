@@ -1,0 +1,46 @@
+.iu-testimonals{
+  padding:40px 0;
+  .grid-items{
+    padding:0;
+    margin: 0;
+    .left{
+      padding:10px;
+      padding-left:0px;
+    }
+    .right{
+      padding:0;
+    }
+  }
+  &[data-columns="1"] {
+    width:100% !important;
+    .left{
+      width:100%;
+    }
+    @media @tablet-and-below{
+      .right{
+        margin-top:10px;
+        .description{
+          margin-left:0;
+        }
+      }
+
+    }
+  }
+
+  &[data-columns="2"] {
+    @media @tablet-and-below{
+      width:100% !important;
+      .left{
+        width:100%;
+      }
+      .right{
+        margin-top:10px;
+        padding:20px;
+        .description{
+          margin-left:0;
+        }
+      }
+
+    }
+  }
+}

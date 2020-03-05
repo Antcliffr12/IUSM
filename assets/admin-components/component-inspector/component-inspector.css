@@ -1,0 +1,29 @@
+#component-inspector {
+	display: none;
+	position: fixed;
+	z-index: 99999;
+	top: 0;
+	left: 0;
+	width: 400px;
+	background: rgba(0,0,0,0.8);
+	color: #fff;
+	padding: 20px;
+	font-size: 0.9rem;
+}
+#component-inspector h2 {
+	font-size: 20px;
+	font-weight: bold;
+	color: #008264;
+	margin: 0 0 10px 0;
+	padding: 0 0 10px 0;
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+#component-inspector h2 span {
+	margin-left: 10px;
+	font-size: 11px;
+	color: #ffffff;
+}
+#component-inspector .current { color: #F1BE48; }
+#component-inspector .parent { color: #DC8823; }
+body.component-inspector-active #component-inspector { display: block; }
+body.component-inspector-active [data-component]:hover { outline: 1px dotted #f60; }

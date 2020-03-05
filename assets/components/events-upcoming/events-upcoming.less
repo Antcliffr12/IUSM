@@ -1,0 +1,52 @@
+.events-upcoming{
+
+  h1{
+    font-size:40px;
+  }
+
+  .item{
+    .date-square{
+      background:@iu-crimson;
+      color:@white;
+      float:left;
+    }
+    .content{
+      display:table;
+      width:80%;
+      .date{
+        display:block;
+        width:100%;
+        color:@iu-dark-cream;
+        font-size:18px;
+      }
+      h2{
+        color:@iu-crimson;
+        font-size:24px;
+      }
+      p{
+        &.description{
+          font-size:18px;
+        }
+      }
+      .lower{
+        .location{
+          font-size:18px;
+          font-weight:bold;
+          color:@iu-crimson;
+        }
+      }
+    }
+  }
+
+  .load-more{
+    display:none;
+    cursor: pointer;
+  }
+
+
+  .ajax-loader{
+    display:none;
+  }
+
+
+}

@@ -1,0 +1,85 @@
+/**
+ * Component Style Sheet
+ */
+.half-n-half {
+	color: @white;
+	position: relative;
+
+	&.img-right {
+		.image {
+			left: 50%;
+			right: 0;
+		}
+	}
+	.image {
+		display: none;
+		position: absolute;
+		bottom: 0;
+		top: 0;
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-size: cover;
+		iframe {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.body {
+		padding: 50px;
+	}
+
+	@media @desktop {
+		.image, .body {
+			display: block;
+			width: 50%;
+			min-height: 200px;
+		}
+		&.img-left {
+			.image {
+				left: 0;
+				right: 50%;
+			}
+			.body {
+				margin-left: 50%;
+			}
+		}
+		.body {
+			.center-contents-vertically;
+			padding: 100px 80px;
+			font-size: 1.125rem;	
+			h2 { font-size: 1.5rem; }
+		}
+		.body:before {
+				content: none;
+		}
+
+	}
+	@media @between-tablet-and-desktop {
+		.body {
+			padding: 80px;
+			// font-size: 1.5vw;
+			// h1,h2 { font-size: 2.5vw; }
+
+		}
+		.body:before {
+				content: none;
+			}
+	}
+
+	@media @tablet-and-below {
+		.body {
+			font-size: 1rem;
+			h1,h2 { font-size: 1.5rem; }
+		}
+	}	
+
+	@media screen and (min-width: 1920px) {
+		.body {
+			font-size: inherit;
+			h1,h2 { font-size: 1.5rem; }
+		}
+
+	}
+
+}
+

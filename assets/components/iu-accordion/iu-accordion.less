@@ -1,0 +1,68 @@
+/**
+ * This is a style-only component. The standard Visual Composer accordion widget is based on Bootstrap and outputs
+ * a similar markup structure, allowing us to target it effectively for styling. The iu-accordion markup is provided
+ * in the faculty profile component.
+ */
+
+.iu-accordion, .vc_tta-accordion {
+	margin-top: 40px;
+	margin-bottom: 0;
+	.panel, .vc_tta-panel {
+		margin-top: 5px !important;
+		.vc_tta-panel-title a::after {
+			background-position: -27px -4px !important;
+		}
+		&.vc_active .vc_tta-panel-title a::after {
+			background-position: -27px 0 !important;
+		}
+	}
+	.panel-heading, .vc_tta-panel-heading {
+		background: @iu-cream !important;
+		color: @iu-midnight !important;
+		padding: 0 !important;
+		border-radius: 0 !important;
+		border: none !important;
+	}
+	.panel-title, .vc_tta-panel-title {
+		font-family: BentonSansBold, Arial, Helvetica, sans-serif;
+		font-size: 1rem;
+		.vc_tta-controls-icon { display: none; }
+		a {
+			display: block;
+			padding: 12px 40px 12px 20px !important;
+			text-decoration: none !important;
+			position: relative;
+			color: @iu-midnight !important;
+			line-height:1.2;
+			&::after {
+				content: ' ';
+				position: absolute;
+				display: block;
+				right: 15px;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				width: 9px;
+				height: 5px;
+				background: url('../images/sprite-triangle-arrows.png') no-repeat -27px 0px;
+			}
+			&.collapsed::after {
+				background-position: -27px -4px;
+			}
+		}
+	}
+	.panel-body {
+		background: @eggshell !important;
+		color: @iu-black !important;
+		padding: 20px !important;
+		border-radius: 0 !important;
+		border: none !important;
+	}
+	h3 { font-size: 1.25rem; }
+	article {
+		margin-top: 20px;
+		&:first-child { margin-top: 0; }
+	}
+}
+
+.wpb-js-composer .vc_tta .vc_tta-controls-icon { display: none !important; }

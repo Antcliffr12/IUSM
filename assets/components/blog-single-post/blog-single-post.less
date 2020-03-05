@@ -1,0 +1,129 @@
+
+.blog-single-post{
+  padding-top:80px;
+  padding-bottom:80px;
+  h1,h2{
+    margin-bottom:8px;
+    font-size:40px;
+  }
+  .sub-heading{
+    font-size:0.8125rem;
+    margin-bottom:13px;
+    a{
+      color: @iu-midnight;
+      &:hover,&:focus{
+        text-decoration:none;
+      }
+    }
+  }
+  img{
+    display:block;
+  }
+
+  .sidebar-posts{
+
+    img{
+      max-width:260px;
+    }
+
+    .title{
+      color: @iu-midnight;
+      font-size:@text-lg;
+      margin-bottom:40px;
+      margin-top:20px;
+      display:block;
+      @media @tablet{
+        max-width:500px;
+      }
+    }
+
+    @media @tablet-and-below{
+        clear:both;
+        padding-top:40px;
+    }
+
+    .related-news{
+        margin-bottom:35px;
+        h1{
+          font-size:24px;
+          margin-bottom:19px;
+        }
+        .box{
+          background:@iu-cream;
+          .item{
+            padding:20px 20px 17px 20px;
+            width:100%;
+            border-bottom:1px solid @white;
+            &:last-child{
+              border-bottom:0;
+            }
+            h2{
+              font-size:13px;
+              text-transform:uppercase;
+              margin-bottom:5px;
+            }
+            a,p{
+              font-size:18px;
+            }
+            a{
+              &:hover,&:focus{
+                text-decoration:none;
+                box-shadow: none;
+                outline:0;
+              }
+            }
+          }
+        }
+
+    }
+
+    .post-image{
+      margin-bottom:35px;
+      img{
+        width:100%;
+        max-width: 100%;
+
+      }
+    }
+  }
+}
+
+
+.media-contacts{
+  float:left;
+  width:100%;
+  margin-bottom:35px;
+  margin-top:35px;
+  .box{
+    background:#EEEDEB;
+    float:left;
+    width:100%;
+    padding: 20px 0 20px 0;
+    .item{
+      padding: 20px 20px 0px 20px;
+      width: 100%;
+
+      .glyphicon{
+        font-size:30px;
+        color:#014368;
+        float:left;
+        width:20%;
+      }
+      h3{
+        font-size: 13px;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        margin-top:0px;
+      }
+      h2{
+        font-size: 16px;
+        margin-bottom: 8px;
+        margin-top:0px;
+      }
+    }
+  }
+
+  @media @phone{
+    margin-top:0px;
+  }
+}

@@ -1,0 +1,83 @@
+/**
+ * Named Colors
+ */
+@black: #000;
+@gray2: #222;
+@gray3: #333;
+@gray4: #444;
+@gray6: #666;
+@gray8: #888;
+@gray-light: #ccc;
+@eggshell: #ddd;
+@offwhite: #eeedeb;
+@white: #fff;
+@teal: #008080;
+@teal-light: lighten(@teal, 10%);
+@red: red;
+
+/**
+ * Color Alias Mappings
+ * Where possible, use the alias names in site and component style sheets
+ * rather than references to specific color names, so changes can be made here
+ */
+@bg-primary: @white;
+@bg-secondary: @iu-midnight;
+@accent-color-primary: @iu-crimson;
+@accent-color-secondary: @iu-midnight;
+@button-default-foreground: @white;
+@button-default-border: @iu-midnight;
+@button-default-background: @iu-midnight;
+@button-reverse-foreground: @white;
+@button-primary: @iu-crimson;
+@button-primary-hover: lighten(@teal-light, 10%);
+@button-primary-text: @white;
+@button-primary-hover-text: @white;
+@button-secondary: @iu-crimson;
+@button-secondary-hover: @iu-midnight;
+@button-secondary-text: @white;
+@button-secondary-hover-text: @white;
+@box-style-a-background: @iu-limestone;
+@box-style-a-text: @white;
+
+/* Assorted Offsets and Sizing Settings */
+@top-nav-height: 30px;
+@top-nav-height-shrink: -30px;
+@header-height-phone: 80px;
+@header-height-phone-shrink: 30px;
+@header-height-tablet: 120px;
+@header-height-tablet-shrink: 45px;
+//@header-height-desktop: 200px;
+@header-height-desktop: 131px;
+@header-height-desktop-shrink: 50px;
+
+
+/* Layout container limits and responsive breakpoints */
+@layout-width-phone: 280px;
+@layout-width-tablet: 708px;
+@layout-width-desktop: 970px;
+
+@highdensity: 		~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+					~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+					~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+					~"only screen and (min-device-pixel-ratio: 1.5)";
+@xsmall:			~"only screen and (max-width: 320px)";
+@between: ~"only screen and (min-width:320px) and (max-width:435px)";
+@small:				~"only screen and (max-width: 520px)";
+@phone:				~"only screen and (max-width: 767px)";
+@tablet-and-below:  ~"only screen and (max-width: 991px)";
+@tablet:			~"only screen and (min-width: 768px) and (max-width: 991px)";
+@tablet-and-above:  ~"only screen and (min-width: 768px)";
+@between-tablet-and-desktop: ~"only screen and (min-width:992px) and (max-width:1200px)";
+@desktop:			~"only screen and (min-width: 992px)";
+@large-and-below:   ~"only screen and (max-width: 1179px)";
+@large:			    ~"only screen and (min-width: 1180px)";
+@xtra-large: ~"only screen and (min-width:2000px)";
+
+
+@text-xxl:  2.5rem;
+@text-xl:   1.875rem;
+@text-lg:   1.5rem;
+@text-md:   1.125rem;
+@text-sm:   1rem;
+@text-xs:   0.875rem;
+@text-xxs:  0.75rem;

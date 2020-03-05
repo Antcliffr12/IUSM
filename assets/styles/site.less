@@ -1,0 +1,175 @@
+* {
+  .border-box;
+}
+html {
+  background: @white;
+  overflow-x: hidden;
+  //&[data-flags~="MOBILE_MENU_ACTIVE"],
+  &[data-flags~="MODAL_ACTIVE"] {
+    overflow: hidden;
+  }
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  min-width: 320px;
+  font-family: 'BentonSansRegular', Arial, Helvetica, sans-serif !important;
+  font-weight: normal;
+  font-size: @text-md;
+  line-height: 1.55;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+label {
+  font-weight: normal !important;
+}
+
+
+//h1 {
+//	font-size: @text-xxl;
+//	@media @phone{
+//		font-size:@text-xl;
+//	}
+//}
+h1 {
+  font-size: @text-xl;
+  @media @phone{
+    font-size:@text-lg;
+  }
+}
+h2 {
+  font-size: @text-lg;
+  @media @phone{
+    font-size:@text-md;
+  }
+}
+
+a {
+  cursor: pointer;
+}
+p a {
+  //color: @iu-crimson;
+  color:#00619a;
+  text-decoration: none;
+  &:hover { text-decoration: underline; }
+}
+
+p, h1, h2, h3, h4, ul, ol, dl, blockquote {
+  margin: 30px 0;
+  &:first-child { margin-top: 0; }
+  &:last-child { margin-bottom: 0; }
+}
+
+img, embed, object, video {
+  max-width: 100%;
+}
+
+
+
+.container {
+  // Fixes background expansion issues
+  .l-fullwidth::before {
+    z-index: 0;
+  }
+  // Containers inside containers don't need to have a set width or padding
+  .container {
+    position: relative;
+    width: auto;
+    padding: 0;
+  }
+}
+
+
+// Misc. Bootstrap overrides
+.alert {
+  border-radius: 0;
+}
+
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+/* This fixes the plus and minus positioning issue on accordions. Submitted by Andy Foster */
+.wpb-js-composer .vc_tta.vc_tta-accordion .vc_tta-controls-icon-position-left .vc_tta-controls-icon {left: 5px !important;}
+@media @phone {
+  .phone-hide { display: none !important; }
+  .phone-show { display: block !important; }
+  p, h1, h2, h3, h4, ul, ol, dl, blockquote { margin: 25px 0; }
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #main-content {
+    border-top: @header-height-phone solid transparent;
+  }
+
+}
+
+@media @tablet {
+  .tablet-hide { display: none !important; }
+  .tablet-show { display: block !important; }
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  #main-content {
+    border-top: @header-height-tablet solid transparent;
+  }
+}
+
+@media @tablet-and-below {
+  .container {
+    width: auto !important;
+  }
+  p, li{
+    font-size:@text-sm;
+  }
+}
+
+@media @desktop {
+  .desktop-hide { display: none !important; }
+  .desktop-show { display: block !important; }
+  #main-content {
+    border-top: @header-height-desktop solid transparent;
+  }
+}
+
+@media @xtra-large{
+  #main-content{
+    max-width:1600px;
+    margin:0 auto;
+    border-top: 131px solid transparent;
+    .container{
+      max-width:1200px;
+    }
+  }
+
+  header{
+    max-width:1600px !important;
+    margin: 0 auto;
+    #site-bar{
+      max-width: 1600px !important;
+      // margin-bottom: 40px;
+      #top-nav{
+        &::before{
+          display: block;
+          content: " ";
+          position: absolute;
+          width: auto;
+          z-index: 0;
+          top: 0;
+          left: -19% !important;
+          bottom: 0;
+          right: -19% !important;
+          background-color: #990000 !important;
+        }
+      }
+    }
+  }
+
+
+}

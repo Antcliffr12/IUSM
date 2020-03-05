@@ -1,0 +1,148 @@
+.authors-featured{
+  padding-top:80px;
+  padding-bottom:80px;
+  h1{
+    font-size:30px;
+    margin-bottom:33px;
+  }
+  h2{
+    margin-bottom:33px !important;
+  }
+
+  .item-cont {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    .item {
+      position:relative;
+      align-self: flex-end;
+      width:360px;
+      margin-right: 40px;
+      &:last-child{
+        margin-right:0;
+      }
+      .image {
+        float: left;
+        a {
+          img {
+            max-width: 160px;
+            width: 100%;
+          }
+        }
+      }
+
+      .content {
+        position: absolute;
+        padding-left: 178px;
+        bottom: 0;
+        &.no-image {
+          padding-left: 0 !important;
+        }
+        h2 {
+          font-size: 24px;
+          line-height: 1.3;
+          margin-bottom: 5px;
+          a {
+            &:hover, &:focus {
+              outline: 0;
+              box-shadow: none;
+              text-decoration: none;
+            }
+          }
+        }
+
+        p.title {
+          font-size: 16px;
+          margin-top: 0;
+          margin-bottom: 14px;
+        }
+
+        ul {
+          margin: 0;
+          padding: 0;
+          line-height:1.2;
+          li {
+            list-style-type: none;
+            font-size: 14px;
+            padding-left: 25px;
+            position: relative;
+            margin-bottom: 9px;
+            &:last-of-type {
+              margin-bottom: 0;
+            }
+            &:before {
+              content: '';
+              position: absolute;
+              width: 16px;
+              height: 16px;
+              background-image: url('../images/popular-authors-icons.png');
+              background-repeat: no-repeat;
+              background-position: 0 0;
+              left: 0;
+            }
+            &.views {
+              &:before {
+                background-position: 0 -25px;
+              }
+            }
+            &.shares {
+              &:before {
+                background-position: 0 -52px;
+              }
+            }
+          }
+        }
+      }
+
+    }
+
+    @media @tablet {
+      .item {
+        align-self: flex-start;
+        .content {
+          padding-top: 14px;
+          padding-left: 0;
+          clear: left;
+          position: relative;
+        }
+      }
+    }
+
+    @media @phone {
+      flex-direction: column;
+      .item {
+        margin-bottom: 15px;
+        margin-right:0;
+        align-self: flex-start;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        .content {
+          &.no-image {
+            padding: 0 !important;
+          }
+          padding-top: 0;
+          padding-left: 178px;
+          clear: none;
+          position: absolute;
+        }
+      }
+    }
+
+    @media @xsmall {
+      .item {
+        width:auto;
+        align-self: flex-start;
+        .content {
+          padding-top: 14px;
+          padding-left: 0;
+          clear: left;
+          position: relative;
+        }
+      }
+    }
+
+
+  }
+}

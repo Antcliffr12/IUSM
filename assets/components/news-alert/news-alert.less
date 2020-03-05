@@ -1,0 +1,78 @@
+.notifcation-bar{
+  height:50px;
+  line-height: 50px;
+  background:@iu-crimson;
+  color:@white;
+  position: relative;
+  z-index: 5;
+
+  &::before{
+    display: block;
+    content: " ";
+    position: absolute;
+    width: auto;
+    z-index: -1;
+    top: 0;
+    left: -100% !important;
+    bottom: 0;
+    right: -100% !important;
+    background-color: #990000 !important;
+  }
+  .flex{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    align-items: baseline;
+    line-height: 50px;
+    h3{
+      padding-right:30px;
+
+      @media @tablet-and-below{
+        line-height: 50px;
+      }
+    }
+    h4{
+      line-height: 30px;
+      @media @phone{
+        display:none;
+      }
+      @media @tablet-and-below{
+
+        display: none;
+      }
+    }
+
+
+  @media @between-tablet-and-desktop{
+    h4 span{
+    display: none;
+    }
+    .text{
+      &::after{
+        content: 'Alert: A vehicle was stolen on Sept 24 that contained a binder...'
+      }
+    }
+
+  }
+    h3,h4{
+      margin:0 !important;
+    }
+    .alert_text{
+      display: flex;
+      display: -webkit-flex;
+      p {
+        margin:0 !important;
+      }
+    }
+    p,a{
+      color:@white;
+      margin:0 !important;
+
+      @media @tablet-and-below{
+        line-height: 50px;
+      }
+    }
+
+
+  }
+}

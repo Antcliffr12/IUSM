@@ -1,0 +1,55 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 944 316.33">
+<defs>
+<style>.cls-1{fill:#900;}.cls-2{font-size:42.98px;fill:#fff;}.cls-2,.cls-4,.cls-6{font-family:SegoeUI, Segoe UI;}.cls-3{fill:#ededea;}.cls-4{font-size:19px;}.cls-5,.cls-6{font-size:18px;}.cls-7{letter-spacing:-0.03em;}
+.cls-8{letter-spacing:-0.03em;}.cls-9{letter-spacing:-0.03em;}</style>
+</defs>
+<title>Milestone_Achievements</title>
+<rect class="cls-1" y="255" width="199.33" height="61.33"/>
+<text class="cls-2" transform="translate(53.33 301.8)">2013</text>
+<rect class="cls-1" x="247.33" y="255" width="199.33" height="61.33"/>
+<text class="cls-2" transform="translate(300.67 301.8)">2014</text>
+<rect class="cls-1" x="496" y="255" width="199.33" height="61.33"/>
+<text class="cls-2" transform="translate(549.33 301.8)">2015</text>
+<rect class="cls-1" x="744.67" y="255" width="199.33" height="61.33"/>
+<text class="cls-2" transform="translate(798 301.8)">2016</text>
+<polygon class="cls-1" points="220 269.75 220 277.33 227.92 282.75 220 288.67 220 295.67 233 285.67 233 279.75 220 269.75"/>
+<polygon class="cls-1" points="467.32 271.71 467.32 279.29 475.24 284.71 467.32 290.63 467.32 297.63 480.32 287.63 480.32 281.71 467.32 271.71"/>
+<polygon class="cls-1" points="714.83 272.71 714.83 280.29 722.75 285.71 714.83 291.63 714.83 298.63 727.83 288.63 727.83 282.71 714.83 272.71"/>
+
+<a xlink:href= "/faculty/6512/hess-jay/">
+<rect class="cls-3" x="1.5" y="171.83" width="196.33" height="75" />
+<path class="cls-1" d="M196.33,173.33v72H3v-72H196.33m3-3H0v78H199.33v-78Z"/>
+<text class="cls-4" transform="translate(10 217.73)">Dean Hess Arrives<tspan class="cls-5" x="150.8" y="-25"> </tspan></text>
+</a>
+
+<rect class="cls-3" x="248.83" y="171.83" width="196.33" height="75"/>
+<path class="cls-1" d="M443.67,173.33v72H250.33v-72H443.67m3-3H247.33v78H446.67v-78Z"/>
+<text class="cls-6" transform="translate(257.33 191.99)">Continuous Quality <tspan x="0" y="23">Improvement Office</tspan><tspan x="0" y="44.6">Launches </tspan></text>
+
+<a xlink:href= "/education/md/curriculum/">
+<rect class="cls-3" x="497.5" y="171.5" width="196.33" height="75"/>
+<path class="cls-1" d="M692.33,173v72H499V173H692.33m3-3H496v78H695.33V170Z"/>
+<text class="cls-6" transform="translate(506 191.66)">School Implements <tspan x="0" y="23">New MD Curriculum </tspan><tspan x="0" y="46">Phase 1 </tspan></text>
+</a>
+
+<rect class="cls-3" x="746.17" y="171.5" width="196.33" height="75"/>
+<path class="cls-1" d="M941,173v72H747.67V173H941m3-3H744.67v78H944V170Z"/>
+<text class="cls-6" transform="translate(754.67 191.66)">School Earns <tspan x="0" y="23">National </tspan><tspan class="cls-7" x="72.26" y="23">R</tspan><tspan x="82.5" y="23">ecognition </tspan>
+<tspan x="0" y="46">for Diversity </tspan></text>
+
+<rect class="cls-3" x="746.17" y="86.5" width="196.33" height="75"/>
+<path class="cls-1" d="M941,88v72H747.67V88H941m3-3H744.67v78H944V85Z"/>
+<text class="cls-6" transform="translate(754.67 118.66)"><tspan class="cls-8">S</tspan><tspan x="8.98" y="0">tudent </tspan><tspan class="cls-9" x="66.5" y="0">F</tspan><tspan x="74.67" y="0">acilities</tspan>
+<tspan x="0" y="20.6">Upgraded </tspan><tspan class="cls-8" x="84.51" y="20.6">S</tspan><tspan x="93.49" y="20.6">tatewide</tspan><tspan x="161.64" y="9.6"> </tspan></text>
+
+<rect class="cls-3" x="746.17" y="1.5" width="196.33" height="75"/>
+<path class="cls-1" d="M941,3V75H747.67V3H941m3-3H744.67V78H944V0Z"/><text class="cls-6" transform="translate(754.67 21.66)"><tspan class="cls-8">S</tspan><tspan x="8.98" y="0">tatewide Course </tspan>
+<tspan x="0" y="23">Leadership </tspan><tspan class="cls-8" x="91.01" y="23">S</tspan><tspan x="99.99" y="23">tructure </tspan><tspan x="0" y="46">Activated</tspan></text>
+
+<a xlink:href= "/education/md/student-support/mentoring-advising/">
+<rect class="cls-3" x="497.83" y="88.5" width="196.33" height="75"/>
+<path class="cls-1" d="M692.67,90v72H499.33V90H692.67m3-3H496.33v78H695.67V87Z"/>
+<text class="cls-6" transform="translate(506.33 108.66)">New Mentoring and <tspan x="0" y="23">Advising Program </tspan><tspan class="cls-7" x="0" y="46">R</tspan><tspan x="10.24" y="46">olls Out </tspan></text>
+</a>
+
+</svg>

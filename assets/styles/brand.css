@@ -1,0 +1,308 @@
+/* Branding Bar */
+/* Add a utitlity clearfix */
+.brand-clearfix:before,
+.brand-clearfix:after {
+  content: '';
+  display: table;
+}
+.brand-clearfix:after {
+  clear: both;
+}
+#branding-bar-v1 {
+  background: #7A1705;
+  color: #fff;
+  min-height: 46px;
+  font-size: 16px;
+  text-align: right;
+  position: relative;
+  z-index: 5;
+  -webkit-font-smoothing: initial;
+  -moz-font-smoothing: initial;
+  font-smoothing: initial;
+}
+#branding-bar-v1 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* Campus names */
+#branding-bar-v1 .show-on-mobile {
+  display: inline;
+}
+#branding-bar-v1 .show-on-tablet,
+#branding-bar-v1 .show-on-desktop {
+  display: none;
+}
+#branding-bar-v1 .wrapper {
+  max-width: 63.75em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 2.35765%;
+  padding-left: 2.35765%;
+}
+#branding-bar-v1 .wrapper:before,
+#branding-bar-v1 .wrapper:after {
+  content: " ";
+  display: table;
+}
+#branding-bar-v1 .wrapper:after {
+  clear: both;
+}
+#branding-bar-v1 a {
+  color: #fff;
+}
+#branding-bar-v1 a:focus {
+  outline: none;
+}
+#branding-bar-v1 a:focus span {
+  border: 1px solid #fff;
+  box-shadow: 0 0 3px #fff;
+  padding: 2px;
+}
+#branding-bar-v1 ul {
+  list-style: none;
+}
+#branding-bar-v1 p {
+  margin-top: 0;
+}
+/* Bar */
+#branding-bar-v1 .bar {
+  border-top: 6px solid #990000;
+}
+/* Trident Tab & Campus Name */
+#branding-bar-v1 .campus {
+  font-family: "BentonSansCondRegular", "Arial Narrow", Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  /* 16px (16/16) */
+  font-weight: normal;
+  left: auto;
+  letter-spacing: 0.025em;
+  line-height: 1em;
+  /* 16px (16/16) */
+  position: absolute;
+  text-align: left;
+  text-transform: uppercase;
+  top: 6px;
+  z-index: 400;
+  margin: 0;
+}
+#branding-bar-v1.iupui .campus,
+#branding-bar-v1.iupuc .campus {
+  font-size: 27px;
+}
+#branding-bar-v1 .campus a {
+  font-family: inherit;
+  display: table-cell;
+  height: 40px;
+  padding: 0 0 0 50px;
+  text-decoration: none;
+  vertical-align: middle;
+}
+#branding-bar-v1 .campus a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+#branding-bar-v1 .campus img {
+  height: auto;
+  left: 0;
+  position: absolute;
+  top: -5px;
+  width: 40px;
+}
+#branding-bar-v1 .campus .expanded {
+  display: none;
+}
+/* 768px (768/16) */
+@media screen and (min-width: 48em) {
+  #branding-bar-v1 {
+    min-height: 57px;
+  }
+  /* Campus names */
+  #branding-bar-v1 .show-on-tablet {
+    display: inline;
+  }
+  #branding-bar-v1 .show-on-mobile,
+  #branding-bar-v1 .show-on-desktop {
+    display: none;
+  }
+  /*** Trident Tab & Campus Name ***/
+  #branding-bar-v1 .campus {
+    font-size: 1.125em;
+    /* 18px (18/16) */
+    line-height: 52px;
+    /* 18px (18/18) */
+  }
+  #branding-bar-v1 .campus a {
+    height: 46px;
+    padding: 0 0 0 75px;
+  }
+  #branding-bar-v1 .campus img {
+    left: 0;
+    width: 65px;
+  }
+}
+/* 980px (980/16) - 960+20 for FF, IE, Opera d/t rounding */
+@media screen and (min-width: 63.75em) {
+  /* Campus names */
+  #branding-bar-v1 .show-on-desktop {
+    display: inline !important;
+  }
+  #branding-bar-v1 .show-on-tablet,
+  #branding-bar-v1 .show-on-desktop {
+    display: none;
+  }
+  #branding-bar-v1 .wrapper {
+    padding: 0;
+  }
+  #branding-bar-v1 .campus abbr {
+    display: none;
+  }
+  #branding-bar-v1 .campus .expanded {
+    display: block;
+  }
+}
+/* Footer */
+#footer-v1 {
+  -webkit-font-smoothing: initial;
+  -moz-font-smoothing: initial;
+  font-smoothing: initial;
+}
+#footer-v1 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#footer-v1 {
+  background: #fff;
+  font-size: 16px;
+  /* Force a default size for ems */
+  font-family: "BentonSansRegular", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  margin: 0 0 0 0;
+  text-align: center;
+  clear: both;
+  padding: 24px 0;
+  position: relative;
+  z-index: 10;
+}
+#footer-v1 .wrapper {
+  max-width: 63.75em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 2.35765%;
+  padding-left: 2.35765%;
+}
+#footer-v1 .wrapper:before,
+#footer-v1 .wrapper:after {
+  content: " ";
+  display: table;
+}
+#footer-v1 .wrapper:after {
+  clear: both;
+}
+#footer-v1 a {
+  color: #990000;
+}
+#footer-v1 p {
+  font-size: 12px;
+  line-height: 24px;
+  margin: 0;
+  clear: left;
+}
+#footer-v1 .tagline {
+  font-family: BentonSansCondBold, Arial, serif;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  background: #7A1705;
+  color: #fff;
+  font-size: 22px;
+  line-height: 40px;
+  margin: -24px -0.9375rem 24px -0.9375rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+#footer-v1 .tagline span {
+  text-transform: lowercase;
+  font-family: GeorgiaProBoldItalic, Georgia, serif;
+  font-size: 16px;
+  vertical-align: 2px;
+  letter-spacing: 0;
+  margin-left: -4px;
+}
+/* 768px (768/16) */
+@media screen and (min-width: 40em) {
+  #footer-v1 .wrapper {
+    position: relative;
+  }
+  #footer-v1 {
+    text-align: left;
+    border-top: 6px solid #7A1705;
+  }
+  #footer-v1 p {
+    line-height: 36px;
+  }
+  #footer-v1 .tagline {
+    font-size: 24px;
+    position: absolute;
+    left: 50%;
+    margin: 0 -200px 0 0;
+    top: -47px;
+    padding: 0 24px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+/* 980px (980/16) - 960+20 for FF, IE, Opera d/t rounding */
+@media screen and (min-width: 63.75em) {
+  #footer-v1 .wrapper {
+    padding: 0;
+  }
+}
+#footer-v1 a {
+  color: #990000;
+  font-family: inherit;
+  text-decoration: none;
+}
+#footer-v1 a:hover,
+#footer-v1 a:focus {
+  text-decoration: underline;
+}
+#footer-v1 .copyright {
+  margin-top: 25px;
+}
+#footer-v1 .block-iu {
+  display: block;
+  height: 26px;
+  margin: 0 auto 5px auto;
+  width: 22px;
+}
+#footer-v1 .line-break {
+  display: block;
+}
+@media screen and (min-width: 40em) {
+  #footer-v1 .line-break {
+    display: inline;
+  }
+  #footer-v1 p {
+    line-height: 26px;
+    clear: inherit;
+  }
+  #footer-v1 .copyright {
+    overflow: hidden;
+    padding: 0;
+    margin-top: 15px;
+    position: relative;
+    float: left;
+  }
+  #footer-v1 .internal {
+    float: right;
+    margin-top: 15px;
+  }
+  #footer-v1 .block-iu {
+    float: left;
+    margin: 0 9px 0 0;
+  }
+}

@@ -1,0 +1,160 @@
+/**
+ * Styles for AE Slick Slider Plugin.
+ */
+.kw-slider {
+	position:relative;
+	margin: 0;
+
+	button{
+		&.slick-arrow {
+			position: absolute;
+			top: 50%;
+			margin-top: -20px;
+			z-index: 1;
+			height: 40px;
+			width: 40px;
+			&:before {
+				content: '';
+				position: absolute;
+				width: 40px;
+				height: 40px;
+				background: #000;
+				opacity: 0.6;
+				top: 0;
+				left: 0;
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				width: 16px;
+				height: 14px;
+				opacity: 1;
+			}
+			&.slick-prev {
+				left: 0;
+				&:after {
+					background: url(../images/kw-arrow-left.png) no-repeat;
+					top: 13px;
+					left: 11px;
+				}
+			}
+			&.slick-next {
+				right: 0;
+				&:after {
+					background: url(../images/kw-arrow-right.png) no-repeat;
+					top: 13px;
+					left: 11px;
+				}
+			}
+		}
+	}
+
+	.item {
+		position:relative;
+		max-height: 960px;
+	}
+
+	.slick-slide {
+		background: #000000; // If images don't show, need high contrast for accessibility
+		img { width: 100%; }
+	}
+
+	.overlay-box {
+		//background: @iu-black;
+		color: @white;
+		font-size: @text-lg;
+		line-height: 1.5;
+		padding:30px;
+		h1 {
+			//font-size: @text-xxl;
+			position: relative;
+			font-family: BentonSansBold,"Helvetica Neue",Helvetica,Helvetica,Arial,sans-serif;
+			font-style: normal;
+			font-size:2.3125rem;
+			line-height:1.15;
+			margin-top:0.2rem;
+			margin-bottom:1.15rem;
+		}
+		.button {
+			color: @white;
+			border-color: @white;
+			background-color: transparent;
+			&:hover {
+				background-color: @button-default-background;
+			}
+			&:after { border-left-color: @white; }
+		}
+		p{
+			position: relative;
+			margin:0 0 10px;
+		}
+		a {
+			text-decoration: none;
+			text-transform: uppercase;
+			font-size: @text-xs;
+			font-family: BentonSansBold, Arial, Helvetica, sans-serif;
+			position: relative;
+		}
+	}
+
+
+
+	@media @tablet-and-above {
+		.overlay-box {
+			position: absolute;
+			bottom: 40px;
+			left: 20px;
+			right: 20px;
+			margin: auto;
+			max-width: 1160px;
+			width: 100%;
+			width: ~"calc(100% - 40px)";
+			overflow:hidden;
+			//background: rgba(0,0,0,0.6);
+			//.clip-path(~"polygon(100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0 0)");
+			&:before{
+				content:'';
+				background:url(../images/notch-dark.svg) right bottom no-repeat;
+				width:2000px;
+				height:2000px;
+				bottom:-25px;
+				right:-25px;
+				overflow:hidden;
+				position:absolute;
+			}
+		}
+	}
+
+	@media @tablet {
+		.overlay-box {
+			padding: 30px;
+		}
+	}
+
+	@media @phone {
+		.overlay-box {
+			position: relative;
+			background: @iu-black;
+			padding: 20px;
+			h2{
+				font-size:1.25rem;
+				margin-bottom:10px;
+			}
+			p{
+				margin:12px 0;
+				font-size:@text-xs;
+			}
+		}
+
+	}
+}
+
+#banner-slider .slick-slider {
+	margin-bottom: 0;
+}
+
+@media @xtra-large{ 
+	#banner-slider {
+		margin-top: 40px; 
+	}
+}

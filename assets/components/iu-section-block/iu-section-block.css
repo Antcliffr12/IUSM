@@ -1,0 +1,9 @@
+.iu-section-block:before {
+  content: none !important;
+}
+.iu-section-block > .container .wpb_content_element {
+  margin-bottom: 0;
+}
+.iu-section-block .container {
+  padding: 0 40px;
+}

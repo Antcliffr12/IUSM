@@ -1,0 +1,36 @@
+if(!is_null($this->version) && $this->is_news_search() ){
+
+  //$startPage = get_query_var( 'paged', 1 );
+  $startPage = (get_query_var('paged')) ? get_query_var('paged') : 1;
+  //$startPage = $_GET['page'];
+  $perPage = 11;
+  $currentRecord = 0;
+
+
+  foreach($searchResults as $result) {
+    $currentRecord += 1;
+            $pubdate = $result['pubDate'];
+            $pubdate = date('F d, Y', strtotime($pubdate));
+            if($currentRecord > ($startPage * $perPage) && $currentRecord < ($startPage * $perPage + $perPage)){
+            ?>
+              <div class="result-item" data-postid="<?= $result['id'] ?>">
+                  <li>
+                    <h3><a class="title" href="<?= $result['link'] ?>"><?= $result['title'] ?></a></h3>
+                    <span class="pubdate"><?= $pubdate; ?></span>
+                    <a class="link"
+                       href="<?= $result['link'] ?>"><?= mb_strimwidth($result['link'], 0, 80, '...'); ?></a>
+                    <p><?= $result['description'] ?></p>
+                  </li>
+              </div>
+              <?php
+              }
+            }
+            //$pages = ceil(count($searchResults) / $perPage);
+            for($i =1; $i <= ($currentRecord / $perPage); $i++ ){
+              echo "<a href='?section=".$i."'>".($i+1)."</a>";
+            }
+            // $total  = count($searchResults);
+            // for($i = 1; $i <= ($total / $perPage); $i++){
+            // echo("<a href='newsrooms/?page=".$i."/?t=news&v=0&s=IU'>".$i."</a>");
+            // }
+}

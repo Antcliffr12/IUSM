@@ -1,0 +1,46 @@
+.iu-feature-block{
+
+  > h1 + .content {
+    border-top: 3px solid @iu-cream;
+  }
+  .content {
+
+    padding:40px 0;
+    border-bottom:3px solid @iu-cream;
+
+    img{
+      display:block;
+      float:left;
+      margin-right: 40px;
+      max-width:360px;
+    }
+
+    article {
+      margin-left: 400px;
+      display:block;
+    }
+
+    h2 {
+      color: @iu-crimson;
+      font-size: 1.25rem;
+      margin-bottom: 35px;
+      font-family: BentonSansBold, Arial, Helvetica, sans-serif;
+    }
+
+    p{
+      font-size:@text-md;
+    }
+
+    @media @phone{
+      img{
+        margin-bottom:40px;
+      }
+      article{
+        float:left;
+        margin-left:0;
+      }
+    }
+
+  }
+
+}

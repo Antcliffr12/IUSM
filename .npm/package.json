@@ -1,0 +1,30 @@
+{
+  "devDependencies": {
+    "del": "^3.x",
+    "glob": "^7.x",
+    "gulp": "^4.x",
+    "gulp-autoprefixer": "^6.x",
+    "gulp-concat": "^2.x",
+    "gulp-header": "^2.x",
+    "gulp-less": "^4.x",
+    "gulp-load-plugins": "^1.5.x",
+    "gulp-rename": "^1.x",
+    "gulp-replace": "^1.0.x",
+    "run-sequence": "^2.x",
+    "yargs": "^12.x"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "name": "iusm-wordpress",
+  "description": "IUSM Bootstrap 3 Theme",
+  "author": "Graham Wheeler",
+  "private": true,
+  "scripts": {
+    "build": "gulp build"
+  },
+  "version": "1.0.2",
+  "dependencies": {
+    "natives": "^1.1.6"
+  }
+}

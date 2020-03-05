@@ -1,0 +1,121 @@
+#vvr-calculator {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+
+fieldset {
+	margin-top: 20px;
+	background: #E0DFDC;
+	border: 1px solid #ACA39A;
+	padding: 40px 20px 60px 20px;
+	position: relative;
+}
+
+legend {
+	position: absolute;
+	background: #ACA39A;
+	top: 0;
+	left: 0;
+	height: 40px;
+	font-size: 20px;
+	width: 50%;
+	padding: 10px 20px;
+	font-weight: bold;
+	color: #fff;
+}
+ legend::after {
+	content: ' ';
+	height: 0;
+	width: 0;
+	border: 40px solid transparent;
+	border-left: 40px solid #ACA39A;
+	position: absolute;
+	border-top: none;
+	right: -80px;
+	top: 0;
+}
+
+.field-wrapper, .calculated-field-wrapper {
+	margin-top: 10px;
+}
+
+label {
+	display: inline-block;
+	margin-right: 10px;
+	font-weight: bold;
+}
+label::after {
+	content: ":";
+}
+
+.field-wrapper label {
+	width: 300px;
+	text-align: right;
+}
+.group-infusion .field-wrapper label {
+	width: 150px;
+}
+
+ .calculated-field-wrapper {
+	font-size: 20px !important;
+	font-weight: bold !important;
+	color: #900;
+}
+
+.calculated-field-wrapper.subtotal {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background: #990000;
+	color: #fff !important;
+	padding: 10px 20px;
+	height: 40px;
+	width: 50%;
+}
+.calculated-field-wrapper.subtotal::before {
+	content: ' ';
+	height: 0;
+	width: 0;
+	border: 40px solid transparent;
+	border-right: 40px solid #900;
+	position: absolute;
+	border-bottom: none;
+	left: -80px;
+	bottom: 0;
+}
+
+.button {
+	background-color: #990000;
+	color: #fff;
+	padding: 10px 20px;
+	font-size: 16px;
+	text-transform: uppercase;
+	text-decoration: none !important;
+	display: inline-block;
+	cursor: pointer;
+	-webkit-transition: background-color 300ms ease-in-out;
+	-moz-transition: background-color 300ms ease-in-out;
+	-ms-transition: background-color 300ms ease-in-out;
+	-o-transition: background-color 300ms ease-in-out;
+	transition: background-color 300ms ease-in-out;
+}
+.button:hover {
+	background-color: #7A1705;
+}
+
+#vvr-score {
+	padding: 20px;
+	background: #ACA39A;
+	color: #fff !important;
+	position: relative;
+}
+
+#vvr-score .calculated-value {
+	color: #900;
+	font-size: 32px;
+	position: relative;
+	top: 3px;
+}
+
+}

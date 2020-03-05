@@ -1,0 +1,252 @@
+
+.enb{
+  &.two_column{
+    .events{
+      clear:both !important;
+      .event-wrapper{
+        border-top:3px solid @iu-cream;
+        margin-top:31px;
+      }
+      h2{
+        margin-top:33px;
+      }
+
+      .item{
+        display:inline-block;
+        width:30.5%;
+        margin-right:3%;
+        vertical-align:top;
+        &:last-child{
+          display:inline-block;
+          width:30.5%;
+          margin-right:0;
+        }
+      }
+    }
+
+    .blog{
+      ul{
+        margin-bottom:8px;
+      }
+    }
+
+
+
+  }
+
+  h2{
+    font-size:@text-xl;
+    margin-bottom:40px;
+  }
+
+  h3{
+    font-size:@text-lg;
+    color:@iu-midnight;
+    margin-bottom:0;
+    line-height:1.4;
+    a{
+      color: @iu-midnight;
+      &:hover, &:focus{
+        text-decoration: none;
+      }
+    }
+  }
+
+  .item{
+    margin-bottom:30px;
+    &:last-child{
+      margin-bottom:0;
+    }
+    a{
+      font-size:@text-md;
+      &:hover, &:focus{
+        text-decoration: none;
+      }
+    }
+    .event-date{
+      background:@iu-crimson;
+      width:50px;
+      height:53px;
+      margin-right:19px;
+      text-align: center;
+      float:left;
+      color:@white;
+      span{
+        line-height: 1;
+        position:relative;
+        top:10px;
+        &.month{
+          display:block;
+          margin-bottom:7px;
+          font-size:0.8125rem;
+          text-transform: uppercase;
+        }
+        &.day{
+          display:block;
+          font-size:@text-md;
+          margin-top:-5px;
+        }
+      }
+    }
+    .event-title{
+      color: @iu-midnight;
+      display:table;
+      position:relative;
+      top:-6px;
+    }
+  }
+
+
+  .blog{
+
+    ul{
+      margin:0;
+      padding:0;
+
+        &.has-title{
+          margin:0;
+          padding:0;
+        }
+        &.no-title{
+          margin:72px 0 0 0;
+          padding:0;
+        }
+    }
+    li{
+      list-style-type: none;
+      a{
+        display:block;
+        font-size:@text-md;
+        color: @iu-midnight;
+        padding:18px 0;
+        border-top:1px solid @iu-cream;
+        &:hover, &:focus{
+          text-decoration:none;
+        }
+      }
+      &:last-child{
+        a {
+          border-bottom: 1px solid @iu-cream;
+        }
+      }
+    }
+
+
+  }
+
+  @media @tablet{
+    .events{
+      clear:both;
+    }
+    .item {
+      display: inline-block;
+      width: 30.5%;
+      margin-right: 3%;
+      vertical-align: top;
+      &:last-child {
+        display: inline-block;
+        width: 30.5%;
+        margin-right: 0;
+      }
+    }
+    .enb_news{
+      margin-bottom:70px;
+    }
+    &.two_column{
+      .enb_news{
+        margin-bottom:0;
+      }
+      .blog{
+        ul{
+          margin-bottom:0;
+        }
+      }
+    }
+  }
+
+  @media @phone{
+    .enb_news,.blog{
+      margin-bottom:70px !important;
+    }
+    &.two_column{
+      .events{
+        .event-wrapper{
+          border-top:0 !important;
+          margin-top:0;
+        }
+        .item{
+          margin-right:0;
+          width:100%;
+          display:block;
+        }
+        h2{
+          margin-top:0;
+        }
+      }
+    }
+  }
+
+  .enb_news{
+    ul{
+      margin:0;
+      padding:0;
+      li{
+      list-style-type: none;
+        &:first-child{
+          border-top:1px solid  #e0dfdc;
+        }
+        a{
+          display:block;
+          font-size:@text-md;
+          color: @iu-midnight;
+          padding:18px 0;
+          border-top:1px solid @iu-cream;
+          &:hover,&:focus{
+          text-decoration:none;
+          }
+        }
+        &:last-child{
+          a {
+            border-bottom: 1px solid @iu-cream;
+          }
+        }
+
+        &.has_image{
+          border:0;
+          a{
+            font-size:24px;
+            padding-top:11px;
+            line-height:1.4;
+            img{
+              display:block;
+              width:100%;
+            }
+          }
+        }
+
+
+        @media @tablet{
+          &.has_image{
+            margin-bottom:40px;
+            a{
+              float:left;
+              width:45%;
+              img{
+                width:92%;
+              }
+            }
+
+          }
+        }
+
+        @media @phone{
+          &.has_image{
+            margin-bottom:40px;
+          }
+        }
+
+      }
+    }
+  }
+
+}

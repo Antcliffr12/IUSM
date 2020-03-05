@@ -1,0 +1,69 @@
+* {
+	.border-box;
+}
+
+&.div {
+	font-family: 'BentonSansRegular', Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: @text-md;
+	line-height: 1.55;
+}
+
+h1 { font-size: @text-xl; }
+h2 { font-size: @text-lg; }
+h3 { font-size: @text-lg; }
+
+a {
+	cursor: pointer;
+}
+p a {
+	color: @iu-crimson;
+	text-decoration: none;
+	&:hover { text-decoration: underline; }
+}
+
+p, h1, h2, h3, h4, ul, ol, dl, blockquote {
+	margin: 30px 0;
+	padding: 0;
+	&:first-child { margin-top: 0; }
+	&:last-child { margin-bottom: 0; }
+}
+
+img, embed, object, video {
+	max-width: 100%;
+}
+
+.container {
+	// Fixes background expansion issues
+	.l-fullwidth::before {
+		z-index: 0;
+	}
+	// Containers inside containers don't need to have a set width or padding
+	.container {
+		position: relative;
+		width: auto;
+		padding: 0;
+	}
+}
+
+.col-centered {
+	float: none;
+	margin: 0 auto;
+}
+
+
+/**
+ * Visual Composer Backend Editor Styles
+ */
+[data-element_type="iu_section_block"] {
+	border: 1px dotted @iu-dark-mint;
+}
+
+// Default VC icon settings when using a Font Awesome icon to represent the element
+.vc_element-icon.fa {
+	background: #900;
+	color: #fff;
+	text-align: center;
+	line-height: 32px;
+}
+

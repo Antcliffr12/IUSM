@@ -1,0 +1,196 @@
+/*-------------------------------------*/
+/*--------CROSS-BROWSER MIXINS---------*/
+/*-------------------------------------*/
+.clip-path(@path:'') {
+	-webkit-clip-path: @path;
+	clip-path: @path;
+}
+
+.drop-shadow(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1) {
+	-webkit-box-shadow: rgba(0, 0, 0, @alpha) @x-axis @y-axis @blur;
+	-moz-box-shadow: rgba(0, 0, 0, @alpha) @x-axis @y-axis @blur;
+	box-shadow: rgba(0, 0, 0, @alpha) @x-axis @y-axis @blur;
+	border-collapse: separate;
+}
+
+.rounded(@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+}
+
+/* [MIXIN] - Expands the background color infinitely on either side */
+.bg-expand(@bgColor: #ffffff) {
+	background-color: @bgColor;
+	position: relative;
+	&::before {
+		display: block;
+		content: " ";
+		position: absolute;
+		width: auto;
+		z-index: 0;
+		top: 0;
+		left: -100%;
+		bottom: 0;
+		right: -100%;
+		background-color: @bgColor;
+	}
+	> .container, > .l-fullwidth {
+		position: relative;
+		z-index: 1;
+	}
+}
+
+.border-bottom-expand(@width: 5px, @border) {
+	&::before {
+		display: block;
+		content: " ";
+		position: absolute;
+		width: auto;
+		z-index: -2;
+		top: 0;
+		left: -100%;
+		bottom: @width * -1;
+		right: -100%;
+		border-bottom: @width @border;
+	}
+}
+
+.border-radius(@topleft: 0, @topright: 0, @bottomright: 0, @bottomleft: 0) {
+	-webkit-border-radius: @topleft @topright @bottomright @bottomleft;
+	-moz-border-radius: @topleft @topright @bottomright @bottomleft;
+	border-radius: @topleft @topright @bottomright @bottomleft;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	/*behavior: url('../base/js/polyfills/PIE.htc');*/
+}
+
+.border-box {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.box-shadow(@arguments) {
+	-webkit-box-shadow: @arguments;
+	-moz-box-shadow: @arguments;
+	box-shadow: @arguments;
+}
+
+.opacity(@opacity) {
+	@ieOpacity: @opacity * 100;
+	-ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(Opacity=@{ieOpacity})"; // IE 8
+	filter: ~"alpha(opacity=@{ieOpacity})"; // IE 5-7
+	opacity: @opacity; // Modern browsers and IE9+
+}
+
+.center-contents-vertically {
+	&::before {
+		content: '';
+		display: inline-block;
+		vertical-align: middle;
+		height: 100%;
+		margin-left: -0.25rem;
+	}
+	> * {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+.clearfix {
+	*zoom:1;
+
+	&::before,
+	&::after {
+		content:" ";
+		display:table;
+	}
+	&::after {
+		clear:both;
+	}
+}
+
+.list-type-type-arrow{
+	position: relative;
+	padding:0;
+	li{
+		list-style-type:none;
+		padding-left:21px;
+		position: relative;
+		&:before{
+			content: url(../images/icon-bullet-arrow-black.png);
+			//background:url(../images/icon-bullet-arrow-black.png) no-repeat;
+			position:absolute;
+			width:20px;
+			height:13px;
+			top:-2px;
+			left:0;
+		}
+	}
+}
+
+.no-padding{
+	padding:0 !important;
+}
+
+.no-margin{
+	margin: 0 !important;
+}
+
+// corner notch
+.notched(@size: 20px, @color: #fff) {
+	&::after {
+		content: " ";
+		border-bottom: none;
+		border-right: @size solid @color;
+		border-top: @size solid transparent;
+		border-left: none;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+}
+
+/* Override color for placeholder text */
+.placeholder-color(@color: @black) {
+	&::-webkit-input-placeholder { color: @color; } /* WebKit browsers */
+	&:-moz-placeholder { color: @color; } /* Mozilla Firefox 4 to 18 */
+	&::-moz-placeholder { color: @color; } /* Mozilla Firefox 19+ */
+	&:-ms-input-placeholder { color: @color; } /* Internet Explorer 10+ */
+}
+
+
+.remove-outline(){
+	outline:none !important;
+	box-shadow:none !important;
+}
+
+
+.translate3D(@x: 0; @y: 0; @z: 0) {
+	-webkit-transform: translate3d(@x,@y,@z);
+	-moz-transform: translate3d(@x,@y,@z);
+	-ms-transform: translate3d(@x,@y,@z);
+	-o-transform: translate3d(@x,@y,@z);
+	transform: translate3d(@x,@y,@z);
+}
+
+.transform(@rule: translate(0px, 0px)) {
+	-webkit-transform: @rule;
+	-moz-transform: @rule;
+	-o-transform: @rule;
+	-ms-transform: @rule;
+	transform: @rule;
+}
+
+.transition(@rule: 0.2s ease) {
+	-webkit-transition: @rule;
+	-moz-transition: @rule;
+	-o-transition: @rule;
+	transition: @rule;
+}
+

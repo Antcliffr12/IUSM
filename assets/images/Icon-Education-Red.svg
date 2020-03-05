@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:none;stroke:#990000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<rect class="st0" width="60" height="60"/>
+<polyline class="st1" points="52,50 52,59 8,59 8,1 52,1 52,46 "/>
+<line class="st1" x1="16" y1="9" x2="44" y2="9"/>
+<line class="st1" x1="16" y1="15" x2="44" y2="15"/>
+<line class="st1" x1="16" y1="21" x2="44" y2="21"/>
+<circle class="st1" cx="43" cy="38" r="5"/>
+<polyline class="st1" points="39,41 31,50 37,50 40,55 43,43 "/>
+<polyline class="st1" points="47,41 55,50 49,50 46,55 43,43 "/>
+<line class="st1" x1="16" y1="27" x2="44" y2="27"/>
+<line class="st1" x1="16" y1="51" x2="26" y2="51"/>
+</svg>

@@ -1,0 +1,45 @@
+.news-featured-post{
+  min-height:80px;
+  &.add-negative-margin{
+    margin-top:-28px;
+  }
+
+  h1{
+    font-size:40px;
+    a{
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  img{
+    	max-height: 300px;
+    	width: auto;
+    	max-width: 360px;
+    	height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+
+    @media @tablet-and-below{
+      margin-bottom:15px;
+    }
+  }
+
+  p{
+    margin:0;
+    font-size:18px;
+    &.excerpt{
+      margin-bottom:28px;
+    }
+    &.details{
+      font-size:13px;
+      a.author{
+        color:@iu-midnight;
+        &:hover, &:focus{
+          text-decoration:none;
+        }
+      }
+    }
+  }
+}

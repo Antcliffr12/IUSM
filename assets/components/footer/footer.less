@@ -1,0 +1,275 @@
+
+footer {
+  .footer-top {
+    padding: 60px 0 45px 0;
+    background: @iu-dark-midnight;
+    color: @white;
+    font-size: @text-xs;
+    line-height: 1.7;
+
+    h1 {
+      margin-bottom: 36px;
+      font-size: @text-lg;
+    }
+
+    a {
+      color: @white;
+      text-decoration: none !important;
+    }
+
+    .footer-menu {
+      ul {
+        float: left;
+        width: 50%;
+        padding: 0 0 0 10px;
+        margin: 0;
+        &:first-child {
+          padding: 0 10px 0 0;
+        }
+      }
+      li {
+        display: block;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid @iu-midnight;
+        &:first-child {
+          border-top: 1px solid @iu-midnight;
+        }
+      }
+      a {
+        display: block;
+        position: relative;
+        font-size: @text-xs;
+        padding: 16px 10px 16px 0;
+        &:before {
+          content: url(../images/icon-bullet-arrow-white.png);
+          text-indent: 0;
+          //font-size: @text-sm * 0.625;
+          top: -2px;
+          left: 0;
+          position: relative;
+          margin-right: 11px;
+          //font-family: FontAwesome;
+        }
+      }
+    }
+
+    .contact-info {
+
+      p {
+        margin: 0;
+      }
+
+      a {
+        font-size: @text-xs;
+        position: relative;
+        &.button {
+          display: inline-block;
+          border: 1px solid @white;
+          padding: 14px 29px 13px 18px;
+          color: @white;
+          &:after {
+            border-left-color: @white;
+          }
+        }
+      }
+
+    }
+
+    .social-links > a {
+
+      display: block;
+      position: relative;
+      margin: 20px 0 0 0;
+      font-size: @text-md;
+
+      &::before {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        margin-right: 16px;
+        font-size: @text-md;
+        .rounded(50%);
+      }
+
+      &.icon-facebook::before {
+        content: url(../images/icon-footer-facebook.svg);
+      }
+      &.icon-twitter::before {
+        content: url(../images/icon-footer-twitter.svg);
+      }
+      &.icon-linkedin::before {
+        content: url(../images/icon-footer-linkedin.svg);
+      }
+      &.icon-instagram::before {
+        content: url(../images/icon-footer-instagram.svg);
+      }
+
+    }
+
+    @media @large-and-below {
+      h1 {
+        margin-bottom: 30px;
+        font-size: @text-md;
+      }
+
+      .col-pos-3, .col-pos-4 {
+        margin-top: 40px;
+      }
+
+      .social-links > a {
+        margin: 15px 0 0 0;
+        font-size: @text-xs;
+      }
+    }
+
+    @media @phone {
+      .col-pos-2, .col-pos-3, .col-pos-4 {
+        margin-top: 30px;
+      }
+
+      .social-links > a {
+        display: inline-block;
+        margin: 0;
+      }
+    }
+  }
+  .footer-bottom {
+    padding: 24px 0.9375rem !important;
+    border-top: 6px solid @iu-crimson;
+    height: 110px;
+    line-height: 55px;
+    font-size: @text-xxs;
+
+    a {
+      color: @iu-crimson;
+    }
+
+    > .container {
+      position: relative;
+    }
+    .tagline {
+      position: relative;
+      width: 385.5px;
+      margin: 0 auto;
+      top: -47px;
+      p {
+        display: block;
+        background: @iu-crimson;
+        padding: 0 24px;
+        font-family: BentonSansCondBold, Arial, serif;
+        font-weight: normal;
+        -webkit-font-smoothing: antialiased;
+        color: @white;
+        font-size: @text-lg;
+        //margin: 0 -200px 0 0;
+        line-height: 2.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.190em;
+        position: absolute;
+        span {
+          text-transform: lowercase;
+          font-family: GeorgiaProBoldItalic, Georgia, serif;
+          font-size: @text-sm;
+          vertical-align: 2px;
+          letter-spacing: 0;
+          margin-left: -4px;
+          position: relative;
+        }
+      }
+      @media @phone {
+        width: 100%;
+        p {
+          width: 100%;
+          text-align: center;
+        }
+      }
+      @media @xsmall {
+        p {
+          font-size: @text-md;
+          span {
+            font-size: @text-xs;
+          }
+        }
+      }
+    }
+
+    .iu-trident-logo {
+      display: block;
+      margin: 0;
+      position: absolute;
+      left: 20px;
+      top: 12px;
+      width: 24px;
+    }
+
+    .privacy-policy {
+      position: absolute;
+      right: 20px;
+      top: 0;
+      bottom: 0;
+      height: 55px;
+      line-height: 55px;
+      margin: auto;
+    }
+
+    .copyright {
+      float: left;
+      padding-left: 39px;
+    }
+
+    p {
+      clear: none;
+      line-height: 55px;
+      font-size: @text-xxs;
+      margin: 0;
+      @media @phone {
+        display: block;
+        padding: 0 !important;
+        line-height: 24px;
+        float: none !important;
+        text-align: center !important;
+        position: relative;
+      }
+    }
+
+    @media @phone {
+      padding: 24px 0 !important;
+      line-height: 24px;
+      .tagline h1 {
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+        position: relative;
+        margin: 0 auto;
+      }
+
+      .iu-trident-logo {
+        position: relative;
+        margin: -20px auto 20px auto;
+        left: 0;
+        top: 0;
+      }
+
+      .privacy-policy {
+        position: relative;
+        right: 0;
+        height: 24px;
+        line-height: 24px;
+        margin: 0px auto 20px auto !important;
+      }
+    }
+
+    @media @small {
+
+      .copyright-complaints {
+        display: block;
+      }
+    }
+
+  }
+}

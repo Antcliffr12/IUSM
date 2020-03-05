@@ -1,0 +1,152 @@
+.resident-profile {
+
+	.summary {
+		position: relative;
+		height: 300px;
+		padding: 0 40px 0 240px;
+		margin-bottom: 40px;
+		.notched();
+
+		.bio-photo {
+			background: @iu-dark-midnight;
+			overflow: hidden;
+			width: 200px;
+			height: 300px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			img {
+				display: block;
+				width: 100%;
+				height: auto;
+				//min-height: 100%;
+			}
+			@media @phone {
+				position: relative !important;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+		.text {
+			height: 100%;
+			> span {
+				max-width: 99%;
+			}
+			@media @phone {
+				display: block;
+				width: 100%;
+				padding: 20px;
+			}
+		}
+		.positions {
+			margin-bottom: 30px;
+		}
+		h1 { margin: 0 0 30px 0; }
+		h3 { font-size: @text-md; margin-top: 10px; }
+
+		@media @phone {
+			height: auto;
+			padding: 0 !important;
+		}
+	}
+
+	.social-links {
+		margin: 15px -5px 0 -5px;
+		a {
+			display: block;
+			float: left;
+			margin: 10px 5px;
+			width: 50px;
+			height: 30px;
+			background: @gray6;
+			line-height: 30px;
+			text-align: center;
+			color: @white;
+			&::after {
+				content: ' ';
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-image: url('../images/social-icons-white.png');
+			}
+			&[data-social-type="1259"] {
+				background-color: @color-twitter;
+				&::after { background-position: -60px 0; }
+			}
+			&[data-social-type="1260"] {
+				background-color: @color-facebook;
+				&::after { background-position: 0 0; }
+			}
+			&[data-social-type="1261"] {
+				background-color: @color-instagram;
+				&::after { background-position: -90px 0; }
+			}
+			&[data-social-type="1263"] {
+				background-color: @color-linkedin;
+				&::after { background-position: -30px 0; }
+			}
+		}
+	}
+
+	.titles-and-appointments {
+		margin: 40px 0 35px 0;
+		padding-top: 40px;
+		border-top: 3px solid @iu-dark-cream;
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			list-style: none none;
+			margin: 5px 0;
+			padding: 0 0 0 20px;
+			position: relative;
+			font-size: @text-md;
+			&::before {
+				content: ' ';
+				position: absolute;
+				display: block;
+				left: 0;
+				top: 7px;
+				width: 10px;
+				height: 10px;
+				background: url('../images/icon-bullet-arrow-black.png') no-repeat left top;
+			}
+		}
+	}
+
+	#profile-accordion {
+		margin: 40px 0 0 0;
+	}
+
+	#panel-education {
+		.item {
+			margin-top: 1rem;
+			&:first-child { margin-top: 0; }
+		}
+		.year {
+			display: inline-block;
+			text-align: center;
+			vertical-align: middle;
+			background: @iu-dark-mint;
+			color: @white;
+			padding: 5px 10px;
+			width: 70px;
+			font-family: BentonSansBold, Arial, Helvetica, sans-serif;
+		}
+		.degree {
+			display: inline-block;
+			text-align: center;
+			vertical-align: middle;
+			background: @iu-mahogany;
+			color: @white;
+			padding: 5px 10px;
+			min-width: 100px;
+			margin: 0 10px 0 -4px;
+			font-family: BentonSansBold, Arial, Helvetica, sans-serif;
+		}
+	}
+
+}

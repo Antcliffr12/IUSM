@@ -1,0 +1,37 @@
+#custom-post_tag {
+  .inside {
+    #taxonomy-post_tag {
+      margin-top:13px;
+      .tag-select-container {
+        width: 170px;
+        display: inline-block;
+        margin-right: 7px;
+        overflow: hidden;
+        border: 1px solid #ccc;
+        position:relative;
+        &:after {
+          content: '';
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 5px 4.5px 0 4.5px;
+          border-color: #000 transparent transparent transparent;
+          position: absolute;
+          right:9px;
+          top:14px;
+        }
+        select {
+          padding: 1px 9px 2px 9px;
+          box-shadow: none;
+          -webkit-appearance: none;
+          -webkit-border-radius: 0;
+          border-radius: 0;
+          height: 30px;
+          border: 0;
+          width: 120%;
+        }
+      }
+    }
+  }
+}
+

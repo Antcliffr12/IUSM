@@ -1,0 +1,72 @@
+
+.iu-blog-post-grid{
+
+  h1{
+    margin-bottom:70px;
+  }
+
+  .grid-container{
+    background:@iu-cream;
+    padding:40px 0 80px 0;
+  }
+
+
+  .grid-item{
+    float:none !important;
+    display:inline-block;
+    vertical-align: top;
+    //padding:0 15px !important;
+    //padding:0 0.48% !important;
+    padding:0 !important;
+    margin-right:2.9%;
+    width:31.1%;
+    img {
+      //width:360px !important;
+    }
+
+    a{
+      color:@iu-dark-midnight;
+      //max-width:360px;
+      display:block;
+      &:after{
+        display:none !important;
+      }
+    }
+
+    @media @tablet{
+      width:31%;
+    }
+
+    @media @phone{
+      width:96.5%;
+      display:table;
+      margin:40px auto 0 auto !important;
+    }
+  }
+
+  .load-more{
+    display:table;
+    margin:40px auto 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    color:@white;
+    background: @iu-midnight;
+    font-size:0.8125rem;
+    padding:15px 19px;
+    cursor:pointer;
+  }
+
+  .ajax-loader{
+    //display:table;
+    display:none;
+    height:50px;
+    margin:40px auto 0 auto;
+    position: relative;
+    img{
+      position: relative;
+      top:10px;
+    }
+  }
+
+
+}

@@ -1,0 +1,29 @@
+.iu-split-columns-a {
+
+  .button {
+    &.add-logo{
+      padding: 13px 20px 13px 70px;
+      font-size: 1.625rem;
+      &::after {
+        display: none !important;
+      }
+      &::before {
+        position: absolute;
+        content: '';
+        background: url('../images/iu-logo-small.png') no-repeat left top;
+        width: 32px;
+        height: 40px;
+        left: 20px;
+        top: 9px;
+      }
+    }
+  }
+
+  @media @phone{
+    .col-pos-2{
+      margin-top:40px;
+    }
+  }
+
+
+}

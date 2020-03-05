@@ -1,0 +1,55 @@
+
+.stat-bar {
+  position: relative;
+  .item {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    &::before {
+      content: '';
+      width: 1px;
+      left: 0;
+      background: @black;
+      opacity: 0.2;
+      position:absolute;
+      top:21px;
+      bottom:21px;
+      //top: 40px;
+      //bottom: 15px;
+    }
+    &:first-child{
+      &::before {
+        display:none;
+      }
+    }
+    @media @phone{
+      &:before {
+        display:none;
+      }
+    }
+  }
+
+  .digit{
+    font-size:@text-xxl;
+    line-height:1.06;
+  }
+  .information{
+    font-size:@text-md;
+    line-height:1.6;
+    width:80%;
+    margin:0 auto;
+  }
+
+}
+
+@media @tablet-and-above {
+  .page-layout-two-column .stat-bar {
+    .notched(20px, @white);
+    .clip-path(~"polygon(100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 0)");
+    .item::before {
+      display: none;
+    }
+  }
+}
+
+

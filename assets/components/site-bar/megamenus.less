@@ -1,0 +1,648 @@
+.megamenu-panel {
+	display: none;
+	background-color: @gray4;
+	color: @white;
+	position: absolute;
+	left: 20px;
+	right: 20px;
+	border-top: 5px solid @iu-crimson;
+	font-size: 1rem;
+	.row.bg {
+		position: absolute;
+		z-index: 0;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		&::before {
+			content: '';
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			bottom: 0;
+			height: 100%;
+		}
+	}
+	.row.fg {
+		position: relative;
+		z-index: 1;
+	}
+	.menu-header {
+		background: @iu-crimson;
+		color: white;
+		font-weight: 600;
+		padding: 15px 40px;
+		font-size: 1rem;
+		margin: 0;
+		display: block;
+	}
+	a {
+		color: @white;
+		text-decoration: none !important;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		display: block;
+	}
+	.pane {
+		padding: 30px 40px;
+	}
+
+	@media @large {
+		.menu-header {
+			font-size: 1.4rem;
+			font-weight: normal;
+		}
+	}
+
+	@media @tablet-and-below {
+		display: none !important;
+	}
+}
+
+#megamenu-about, #megamenu-departments {
+	&::before {
+		content: '';
+		display: block;
+		height: 1px;
+		width: 100%;
+		border-top: 1px solid rgba(0, 0, 0, 0.15);
+		position: absolute;
+		top: -5px;
+	}
+	li {
+		list-style: none none;
+		margin: 5px 0;
+		padding: 0 0 0 20px;
+		position: relative;
+		background-image: url('../images/icon-bullet-arrow-white.png');
+		background-repeat: no-repeat;
+		background-position: left 6px;
+	}
+}
+
+#megamenu-departments,
+#megamenu-education,
+#megamenu-research,
+#megamenu-campus,
+#megamenu-give,
+#megamenu-news,
+#megamenu-expertise  {
+	top: 126px;
+	@media screen and (max-width: 1159px) {
+		top: 123px;
+	}
+}
+
+
+#megamenu-about {
+	top: 30px;
+	.row.bg::before {
+		left: 33.33333333%;
+		width: 33.33333333%;
+		border-left: 1px solid @white;
+		border-right: 1px solid @white;
+	}
+	.mm-left {
+		.menu-header {
+			margin-right: -20px;
+		}
+	}
+	.mm-center {
+		.pane {
+			padding: 30px 20px;
+		}
+		.menu-header {
+			padding-left: 39px;
+			margin-left: -19px;
+			margin-right: -19px;
+		}
+	}
+	.mm-right {
+		.menu-header {
+			padding-left: 39px;
+			margin-left: -20px;
+		}
+		.pane {
+			padding-left: 20px;
+		}
+	}
+}
+
+
+#megamenu-give {
+	top: 30px;
+	.row.bg::before {
+		left: 25%;
+		width: 25%;
+		border-left: 1px solid @white;
+		border-right: 1px solid @white;
+	}
+	ul {
+		list-style: none none;
+		margin: 0;
+	}
+	li {
+		&.hovered {
+			> a {
+				background: @gray6;
+			}
+		}
+	}
+	a {
+		display: block;
+		color: @white;
+		padding: 10px 20px;
+	}
+
+	.mm-tier {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		> * {
+			display: none;
+			&.active { display: block; }
+		}
+	}
+
+	.tier-1 > ul { margin-right: -20px; }
+	.tier-2 > ul { margin: 0 -19px; }
+	.tier-3 > ul { margin-left: -20px; }
+
+	.menu-header {
+		margin: -20px -40px 35px -40px;
+	}
+
+	.campus-detail {
+		padding: 0 40px 0 20px;
+		.summary {
+			margin: 35px 0 35px;
+		}
+		li {
+			list-style: none none;
+			margin: 5px 0;
+			padding: 0 0 0 20px;
+			position: relative;
+			background-image: url('../images/icon-bullet-arrow-white.png');
+			background-repeat: no-repeat;
+			background-position: left 6px;
+			a {
+				padding: 0;
+				background: none !important;
+			}
+		}
+	}
+
+	.md-detail {
+		padding: 0 40px 0 20px;
+		.summary {
+			margin: 35px 0 35px;
+		}
+		li {
+			list-style: none none;
+			margin: 5px 0;
+			padding: 0 0 0 20px;
+			position: relative;
+			background-image: url('../images/icon-bullet-arrow-white.png');
+			background-repeat: no-repeat;
+			background-position: left 6px;
+			a {
+				padding: 0;
+				background: none !important;
+			}
+		}
+	}
+
+}
+
+
+#megamenu-news {
+	.row.bg::before {
+	 left: 25%;
+	 width: 25%;
+	 border-left: 1px solid @white;
+
+ }
+ ul {
+	 list-style: none none;
+	 margin: 0;
+ }
+ li {
+	 &.hovered {
+		 > a {
+			 background: @gray6;
+		 }
+	 }
+ }
+ a {
+	 display: block;
+	 color: @white;
+	 padding: 10px 20px;
+ }
+
+ .mm-tier {
+	 padding-top: 20px;
+	 padding-bottom: 20px;
+	 > * {
+		 display: none;
+		 &.active { display: block; }
+	 }
+ }
+
+ .tier-1 > ul { margin-right: -20px; }
+ .tier-2 > ul { margin: 0 -19px; }
+ .tier-3 > ul { margin-left: -20px; }
+
+ .menu-header {
+	 margin: -20px -40px 35px -40px;
+ }
+
+ .expertise-detail {
+	 padding: 0 40px 0 20px;
+	 .summary {
+		 margin: 35px 0 35px;
+	 }
+	 li {
+		 list-style: none none;
+		 margin: 5px 0;
+		 padding: 0 0 0 20px;
+		 position: relative;
+		 background-image: url('../images/icon-bullet-arrow-white.png');
+		 background-repeat: no-repeat;
+		 background-position: left 6px;
+		 a {
+			 padding: 0;
+			 background: none !important;
+		 }
+	 }
+ }
+
+ .md-detail {
+	 padding: 0 40px 0 20px;
+	 .summary {
+		 margin: 35px 0 35px;
+	 }
+	 li {
+		 list-style: none none;
+		 margin: 5px 0;
+		 padding: 0 0 0 20px;
+		 position: relative;
+		 background-image: url('../images/icon-bullet-arrow-white.png');
+		 background-repeat: no-repeat;
+		 background-position: left 6px;
+		 a {
+			 padding: 0;
+			 background: none !important;
+		 }
+	 }
+ }
+
+}
+
+
+
+
+#megamenu-departments {
+	.row.bg::before {
+		left: 33.33333333%;
+		width: 0;
+		border-left: 1px solid @white;
+	}
+	.mm-left {
+		.menu-header {
+			margin-right: -20px;
+		}
+	}
+	.mm-right {
+		.menu-header {
+			padding-left: 39px;
+			margin-left: -19px;
+		}
+		.pane {
+			padding-left: 20px;
+		}
+	}
+}
+
+
+#megamenu-education {
+	.row.bg::before {
+		left: 25%;
+		width: 25%;
+		border-left: 1px solid @white;
+		border-right: 1px solid @white;
+	}
+	ul {
+		list-style: none none;
+		margin: 0;
+	}
+	li {
+		&.hovered {
+			> a {
+				background: @gray6;
+			}
+		}
+	}
+	a {
+		display: block;
+		color: @white;
+		padding: 10px 20px;
+	}
+
+	.mm-tier {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		> * {
+			display: none;
+			&.active { display: block; }
+			&.hovered { display: block !important; }
+		}
+	}
+
+	.tier-1 > ul { margin-right: -20px; }
+	.tier-2 > ul { margin: 0 -19px; }
+	.tier-3 > ul { margin-left: -20px; }
+
+	.menu-header {
+		margin: -20px -40px 35px -40px;
+	}
+
+	.campus-detail {
+		padding: 0 40px 0 20px;
+		.summary {
+			margin: 35px 0 35px;
+		}
+		li {
+			list-style: none none;
+			margin: 5px 0;
+			padding: 0 0 0 20px;
+			position: relative;
+			background-image: url('../images/icon-bullet-arrow-white.png');
+			background-repeat: no-repeat;
+			background-position: left 6px;
+			a {
+				padding: 0;
+				background: none !important;
+			}
+		}
+	}
+
+	.md-detail {
+		padding: 0 40px 0 20px;
+		.summary {
+			margin: 35px 0 35px;
+		}
+		li {
+			list-style: none none;
+			margin: 5px 0;
+			padding: 0 0 0 20px;
+			position: relative;
+			background-image: url('../images/icon-bullet-arrow-white.png');
+			background-repeat: no-repeat;
+			background-position: left 6px;
+			a {
+				padding: 0;
+				background: none !important;
+			}
+		}
+	}
+
+}
+
+#megamenu-research
+ {
+	.row.bg::before {
+		left: 25%;
+		width: 25%;
+		border-left: 1px solid @white;
+		border-right: 1px solid @white;
+	}
+	ul {
+		list-style: none none;
+		margin: 0;
+	}
+	li {
+		&.hovered {
+			> a {
+				background: @gray6;
+			}
+		}
+	}
+	a {
+		display: block;
+		color: @white;
+		padding: 10px 20px;
+	}
+
+	.mm-tier {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		> * {
+			display: none;
+			&.active { display: block; }
+		}
+	}
+
+	.tier-1 > ul { margin-right: -20px; }
+	.tier-2 > ul { margin: 0 -19px; }
+	.tier-3 > ul { margin-left: -20px; }
+
+	.menu-header {
+		margin: -20px -40px 35px -40px;
+	}
+
+	.labs-detail {
+		padding: 0 40px 0 20px;
+		.summary {
+			margin: 35px 0 35px;
+		}
+		li {
+			list-style: none none;
+			margin: 5px 0;
+			padding: 0 0 0 20px;
+			position: relative;
+			background-image: url('../images/icon-bullet-arrow-white.png');
+			background-repeat: no-repeat;
+			background-position: left 6px;
+			a {
+				padding: 0;
+				background: none !important;
+			}
+		}
+	}
+	.parent-active{
+		display: block;
+	}
+
+}
+
+
+#megamenu-campus
+ {
+	 .row.bg::before {
+ 		left: 25%;
+ 		width: 25%;
+ 		border-left: 1px solid @white;
+ 		// border-right: 1px solid @white;
+ 	}
+ 	ul {
+ 		list-style: none none;
+ 		margin: 0;
+ 	}
+ 	li {
+ 		&.hovered {
+ 			> a {
+ 				background: @gray6;
+ 			}
+ 		}
+ 	}
+ 	a {
+ 		display: block;
+ 		color: @white;
+ 		padding: 10px 20px;
+ 	}
+
+ 	.mm-tier {
+ 		padding-top: 20px;
+ 		padding-bottom: 20px;
+ 		> * {
+ 			display: none;
+ 			&.active { display: block; }
+ 		}
+ 	}
+
+ 	.tier-1 > ul { margin-right: -20px; }
+ 	.tier-2 > ul { margin: 0 -19px; }
+ 	.tier-3 > ul { margin-left: -20px; }
+
+ 	.menu-header {
+ 		margin: -20px -40px 35px -40px;
+ 	}
+
+ 	.campus-detail {
+ 		padding: 0 40px 0 20px;
+ 		.summary {
+ 			margin: 35px 0 35px;
+ 		}
+ 		li {
+ 			list-style: none none;
+ 			margin: 5px 0;
+ 			padding: 0 0 0 20px;
+ 			position: relative;
+ 			background-image: url('../images/icon-bullet-arrow-white.png');
+ 			background-repeat: no-repeat;
+ 			background-position: left 6px;
+ 			a {
+ 				padding: 0;
+ 				background: none !important;
+ 			}
+ 		}
+ 	}
+
+ 	.md-detail {
+ 		padding: 0 40px 0 20px;
+ 		.summary {
+ 			margin: 35px 0 35px;
+ 		}
+ 		li {
+ 			list-style: none none;
+ 			margin: 5px 0;
+ 			padding: 0 0 0 20px;
+ 			position: relative;
+ 			background-image: url('../images/icon-bullet-arrow-white.png');
+ 			background-repeat: no-repeat;
+ 			background-position: left 6px;
+ 			a {
+ 				padding: 0;
+ 				background: none !important;
+ 			}
+ 		}
+ 	}
+
+}
+
+
+
+#megamenu-expertise
+ {
+	 .row.bg::before {
+ 		left: 25%;
+ 		width: 25%;
+ 		border-left: 1px solid @white;
+
+ 	}
+ 	ul {
+ 		list-style: none none;
+ 		margin: 0;
+ 	}
+ 	li {
+ 		&.hovered {
+ 			> a {
+ 				background: @gray6;
+ 			}
+ 		}
+ 	}
+ 	a {
+ 		display: block;
+ 		color: @white;
+ 		padding: 10px 20px;
+ 	}
+
+ 	.mm-tier {
+ 		padding-top: 20px;
+ 		padding-bottom: 20px;
+ 		> * {
+ 			display: none;
+ 			&.active { display: block; }
+ 		}
+ 	}
+
+ 	.tier-1 > ul { margin-right: -20px; }
+ 	.tier-2 > ul { margin: 0 -19px; }
+ 	.tier-3 > ul { margin-left: -20px; }
+
+ 	.menu-header {
+ 		margin: -20px -40px 35px -40px;
+ 	}
+
+ 	.expertise-detail {
+ 		padding: 0 40px 0 20px;
+ 		.summary {
+ 			margin: 35px 0 35px;
+ 		}
+ 		li {
+ 			list-style: none none;
+ 			margin: 5px 0;
+ 			padding: 0 0 0 20px;
+ 			position: relative;
+ 			background-image: url('../images/icon-bullet-arrow-white.png');
+ 			background-repeat: no-repeat;
+ 			background-position: left 6px;
+ 			a {
+ 				padding: 0;
+ 				background: none !important;
+ 			}
+ 		}
+ 	}
+
+ 	.md-detail {
+ 		padding: 0 40px 0 20px;
+ 		.summary {
+ 			margin: 35px 0 35px;
+ 		}
+ 		li {
+ 			list-style: none none;
+ 			margin: 5px 0;
+ 			padding: 0 0 0 20px;
+ 			position: relative;
+ 			background-image: url('../images/icon-bullet-arrow-white.png');
+ 			background-repeat: no-repeat;
+ 			background-position: left 6px;
+ 			a {
+ 				padding: 0;
+ 				background: none !important;
+ 			}
+ 		}
+ 	}
+
+}

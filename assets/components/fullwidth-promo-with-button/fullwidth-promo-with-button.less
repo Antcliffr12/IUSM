@@ -1,0 +1,61 @@
+
+.full-width-promo-with-button {
+
+  @media @tablet-and-above {
+    &.indented {
+      padding-left: 25%;
+    }
+  }
+
+  h2{
+    font-size:@text-xl;
+    margin-bottom:23px;
+  }
+
+  p{
+    font-size:@text-md;
+    margin-bottom:0;
+  }
+
+
+  a {
+    margin-top:31px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: @text-xs;
+    font-family: BentonSansBold, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    position: relative;
+    &.button {
+      margin-top:20px;
+      background:transparent;
+      display: inline-block;
+      border: 1px solid @white;
+      padding: 14px 29px 13px 18px;
+      color: @white;
+      &.add-logo{
+        margin-top:31px;
+        padding:9px 18px 17px 70px;
+        font-size:1.625rem;
+        &:after {
+          display:none !important;
+        }
+        &:before {
+          position: absolute;
+          content: url(../images/iu-logo-small.png);
+          width: 32px;
+          height: 40px;
+          left: 19px;
+        }
+        .text{
+          position:relative;
+          top:5px;
+        }
+      }
+    }
+  }
+
+
+
+}
+

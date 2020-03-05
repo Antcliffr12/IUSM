@@ -1,0 +1,71 @@
+/**
+ * Component Style Sheet
+ */
+.fullwidth-image-banner {
+
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+	min-height: 480px;
+	.transition(min-height 250ms ease-in-out);
+
+	.overlay-box {
+		margin: auto;
+		padding: 20px;
+		background: @iu-black;
+		color: @white;
+		font-size: @text-lg;
+		h1,h2 {
+			font-size: @text-xxl;
+		}
+		.button {
+			color: @white;
+			border-color: @white;
+			background-color: transparent;
+			&:hover {
+				background-color: @button-default-background;
+			}
+			&::after { border-left-color: @white; }
+		}
+	}
+
+	@media @tablet {
+		.overlay-box {
+			bottom: 60px;
+			left: 30px;
+			right: 30px;
+			padding: 30px;
+		}
+	}
+
+	@media @tablet-and-above {
+		min-height: 50vw;
+		position: absolute;
+		background: rgba(0,0,0,0.6);
+		.clip-path(~"polygon(100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0 0)");
+		//&:before{
+		//	content:'';
+		//	background:url(../images/notch-dark.svg) right bottom no-repeat;
+		//	width:2000px;
+		//	height:2000px;
+		//	bottom:-25px;
+		//	right:-25px;
+		//	overflow:hidden;
+		//	position:absolute;
+		//}
+	}
+
+	@media @desktop {
+		.overlay-box {
+			bottom: 80px;
+			left: 0;
+			right: 0;
+			max-width: 1160px;
+			width: 100%;
+			width: ~"calc(100% - 40px)";
+			padding: 40px;
+		}
+	}
+}
+
